@@ -1,0 +1,413 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Raspberry Pi Full Stack Hat"
+Date "2021-03-11"
+Rev "Version 1.0"
+Comp "Zenith Aerospace"
+Comment1 "Designed By: Leonardo Baptistella"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 604A3D59
+P 5775 3925
+F 0 "J1" H 5775 5406 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 5775 5315 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 5775 3925 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 5775 3925 50  0001 C CNN
+	1    5775 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPST SW1
+U 1 1 604AB427
+P 3975 4800
+F 0 "SW1" H 3975 5125 50  0000 C CNN
+F 1 "SW_DPST" H 3975 5034 50  0000 C CNN
+F 2 "freetronics_footprints:SW_PUSHBUTTON_PTH" H 3975 4800 50  0001 C CNN
+F 3 "~" H 3975 4800 50  0001 C CNN
+	1    3975 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 604AC2B7
+P 4300 2975
+F 0 "R2" V 4093 2975 50  0000 C CNN
+F 1 "10K" V 4184 2975 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4230 2975 50  0001 C CNN
+F 3 "~" H 4300 2975 50  0001 C CNN
+	1    4300 2975
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 604AC8B2
+P 4275 5200
+F 0 "R3" H 4345 5246 50  0000 L CNN
+F 1 "10K" H 4345 5155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4205 5200 50  0001 C CNN
+F 3 "~" H 4275 5200 50  0001 C CNN
+	1    4275 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 604ACBFF
+P 7075 3900
+F 0 "R1" H 7145 3946 50  0000 L CNN
+F 1 "330" H 7145 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7005 3900 50  0001 C CNN
+F 3 "~" H 7075 3900 50  0001 C CNN
+	1    7075 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:DHT11 U1
+U 1 1 604AD831
+P 3925 3425
+F 0 "U1" H 3681 3471 50  0000 R CNN
+F 1 "DHT22" H 3681 3380 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 3925 3025 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 4075 3675 50  0001 C CNN
+	1    3925 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 604ACF95
+P 7075 4350
+F 0 "D1" H 7068 4567 50  0000 C CNN
+F 1 "LED" H 7068 4476 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7075 4350 50  0001 C CNN
+F 3 "~" H 7075 4350 50  0001 C CNN
+	1    7075 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7075 4200 7075 4050
+Wire Wire Line
+	7075 3750 7075 3625
+Wire Wire Line
+	7075 3625 6575 3625
+$Comp
+L power:GND #PWR0101
+U 1 1 604B72F2
+P 5475 5425
+F 0 "#PWR0101" H 5475 5175 50  0001 C CNN
+F 1 "GND" H 5480 5252 50  0000 C CNN
+F 2 "" H 5475 5425 50  0001 C CNN
+F 3 "" H 5475 5425 50  0001 C CNN
+	1    5475 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 604B7A39
+P 7075 5450
+F 0 "#PWR0102" H 7075 5200 50  0001 C CNN
+F 1 "GND" H 7080 5277 50  0000 C CNN
+F 2 "" H 7075 5450 50  0001 C CNN
+F 3 "" H 7075 5450 50  0001 C CNN
+	1    7075 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 5425 5475 5325
+Wire Wire Line
+	4225 3425 4650 3425
+$Comp
+L power:GND #PWR0103
+U 1 1 604B8FB5
+P 3925 3950
+F 0 "#PWR0103" H 3925 3700 50  0001 C CNN
+F 1 "GND" H 3930 3777 50  0000 C CNN
+F 2 "" H 3925 3950 50  0001 C CNN
+F 3 "" H 3925 3950 50  0001 C CNN
+	1    3925 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2975 4650 3425
+Connection ~ 3925 2975
+Wire Wire Line
+	3925 2975 3925 3125
+Wire Wire Line
+	5375 5225 5375 5325
+Wire Wire Line
+	5375 5325 5475 5325
+Connection ~ 5475 5325
+Wire Wire Line
+	5475 5325 5475 5225
+Wire Wire Line
+	4175 4700 4275 4700
+Wire Wire Line
+	4275 4700 4275 4800
+Wire Wire Line
+	4275 4900 4175 4900
+Connection ~ 4275 4800
+Wire Wire Line
+	4275 4800 4275 4900
+Text GLabel 4450 4800 2    50   Input ~ 0
+gpio14
+Wire Wire Line
+	4975 3025 4900 3025
+Wire Wire Line
+	4900 3025 4900 2650
+Wire Wire Line
+	4275 5050 4275 4900
+Connection ~ 4275 4900
+$Comp
+L power:GND #PWR0104
+U 1 1 604C0C67
+P 4275 5525
+F 0 "#PWR0104" H 4275 5275 50  0001 C CNN
+F 1 "GND" H 4280 5352 50  0000 C CNN
+F 2 "" H 4275 5525 50  0001 C CNN
+F 3 "" H 4275 5525 50  0001 C CNN
+	1    4275 5525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 5350 4275 5525
+Wire Wire Line
+	3775 4700 3675 4700
+Wire Wire Line
+	3675 4700 3675 4800
+Wire Wire Line
+	3675 4900 3775 4900
+Connection ~ 3675 4800
+Wire Wire Line
+	3675 4800 3675 4900
+Wire Wire Line
+	7075 4500 7075 5450
+NoConn ~ 4975 4125
+NoConn ~ 4975 4225
+NoConn ~ 4975 4325
+NoConn ~ 4975 4425
+NoConn ~ 4975 4525
+NoConn ~ 4975 4625
+NoConn ~ 4975 3925
+NoConn ~ 4975 3825
+NoConn ~ 4975 3725
+NoConn ~ 4975 3525
+NoConn ~ 4975 3325
+NoConn ~ 4975 3125
+NoConn ~ 6575 3025
+NoConn ~ 6575 3125
+NoConn ~ 6575 3325
+NoConn ~ 6575 3425
+NoConn ~ 6575 3725
+NoConn ~ 6575 3825
+NoConn ~ 6575 4025
+NoConn ~ 6575 4125
+NoConn ~ 6575 4225
+NoConn ~ 6575 4325
+NoConn ~ 6575 4425
+NoConn ~ 6575 4625
+NoConn ~ 6575 4725
+NoConn ~ 5575 5225
+NoConn ~ 5675 5225
+NoConn ~ 5775 5225
+NoConn ~ 5875 5225
+NoConn ~ 5975 5225
+NoConn ~ 6075 5225
+NoConn ~ 5975 2625
+NoConn ~ 5575 2625
+NoConn ~ 5675 2625
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 604D11F3
+P 5575 2250
+F 0 "#FLG0101" H 5575 2325 50  0001 C CNN
+F 1 "PWR_FLAG" H 5575 2423 50  0000 C CNN
+F 2 "" H 5575 2250 50  0001 C CNN
+F 3 "~" H 5575 2250 50  0001 C CNN
+	1    5575 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 3950 3925 3725
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 604D4430
+P 5575 5325
+F 0 "#FLG0102" H 5575 5400 50  0001 C CNN
+F 1 "PWR_FLAG" V 5575 5453 50  0000 L CNN
+F 2 "" H 5575 5325 50  0001 C CNN
+F 3 "~" H 5575 5325 50  0001 C CNN
+	1    5575 5325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5575 5325 5475 5325
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 604D5C21
+P 5875 2250
+F 0 "#PWR0105" H 5875 2100 50  0001 C CNN
+F 1 "+3.3V" H 5890 2423 50  0000 C CNN
+F 2 "" H 5875 2250 50  0001 C CNN
+F 3 "" H 5875 2250 50  0001 C CNN
+	1    5875 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5875 2250 5875 2350
+Wire Wire Line
+	5575 2250 5575 2350
+Wire Wire Line
+	5575 2350 5875 2350
+Connection ~ 5875 2350
+Wire Wire Line
+	5875 2350 5875 2625
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 604D88ED
+P 3925 2550
+F 0 "#PWR0106" H 3925 2400 50  0001 C CNN
+F 1 "+3.3V" H 3940 2723 50  0000 C CNN
+F 2 "" H 3925 2550 50  0001 C CNN
+F 3 "" H 3925 2550 50  0001 C CNN
+	1    3925 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4275 4800 4450 4800
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 604DA991
+P 3475 4600
+F 0 "#PWR0107" H 3475 4450 50  0001 C CNN
+F 1 "+3.3V" H 3490 4773 50  0000 C CNN
+F 2 "" H 3475 4600 50  0001 C CNN
+F 3 "" H 3475 4600 50  0001 C CNN
+	1    3475 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3475 4600 3475 4800
+Wire Wire Line
+	3475 4800 3675 4800
+Wire Wire Line
+	3925 2550 3925 2975
+Wire Wire Line
+	4150 2975 3925 2975
+Wire Wire Line
+	4450 2975 4650 2975
+Text GLabel 4800 2650 0    50   Input ~ 0
+gpio14
+Wire Wire Line
+	4900 2650 4800 2650
+Connection ~ 4650 3425
+Wire Wire Line
+	4650 3425 4975 3425
+$Comp
+L Device:R R4
+U 1 1 604E2129
+P 7600 3900
+F 0 "R4" H 7670 3946 50  0000 L CNN
+F 1 "330" H 7670 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7530 3900 50  0001 C CNN
+F 3 "~" H 7600 3900 50  0001 C CNN
+	1    7600 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 604E2133
+P 7600 4350
+F 0 "D2" H 7593 4567 50  0000 C CNN
+F 1 "LED" H 7593 4476 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7600 4350 50  0001 C CNN
+F 3 "~" H 7600 4350 50  0001 C CNN
+	1    7600 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7600 4200 7600 4050
+Wire Wire Line
+	7600 3750 7600 3625
+$Comp
+L power:GND #PWR0108
+U 1 1 604E213F
+P 7600 5450
+F 0 "#PWR0108" H 7600 5200 50  0001 C CNN
+F 1 "GND" H 7605 5277 50  0000 C CNN
+F 2 "" H 7600 5450 50  0001 C CNN
+F 3 "" H 7600 5450 50  0001 C CNN
+	1    7600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4500 7600 5450
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 604E57A9
+P 7600 3625
+F 0 "#PWR0109" H 7600 3475 50  0001 C CNN
+F 1 "+3.3V" H 7615 3798 50  0000 C CNN
+F 2 "" H 7600 3625 50  0001 C CNN
+F 3 "" H 7600 3625 50  0001 C CNN
+	1    7600 3625
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3200 4375 4800 4375
+Wire Notes Line
+	4800 4375 4800 5775
+Wire Notes Line
+	4800 5775 3200 5775
+Wire Notes Line
+	3200 5775 3200 4375
+Wire Notes Line
+	3200 2325 4825 2325
+Wire Notes Line
+	4825 2325 4825 4175
+Wire Notes Line
+	4825 4175 3200 4175
+Wire Notes Line
+	3200 4175 3200 2350
+Wire Notes Line
+	3200 2350 3175 2350
+Wire Notes Line
+	4875 2000 6725 2000
+Wire Notes Line
+	6725 2000 6725 5775
+Wire Notes Line
+	6725 5775 4900 5775
+Wire Notes Line
+	4900 5775 4900 2000
+Text Notes 3175 4350 0    98   ~ 0
+N1 - Push Button\n
+Text Notes 4900 1925 0    98   ~ 0
+N3 - Raspberry
+Wire Notes Line
+	6825 3250 6825 5775
+Wire Notes Line
+	6825 5775 7300 5775
+Wire Notes Line
+	7300 5775 7300 3250
+Wire Notes Line
+	7300 3250 6825 3250
+Wire Notes Line
+	7350 3250 7350 5775
+Wire Notes Line
+	7350 5775 7850 5775
+Wire Notes Line
+	7850 5775 7850 3250
+Wire Notes Line
+	7850 3250 7350 3250
+Text Notes 6825 3200 0    79   ~ 0
+N4 - \nIndicator \nLed
+Text Notes 7400 3200 0    79   ~ 0
+N5 - \nPower \nLed
+Text Notes 3200 2250 0    98   ~ 0
+N2 - Humidity Sensor\n
+$EndSCHEMATC
